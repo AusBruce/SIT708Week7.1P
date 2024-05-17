@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAdvertActivity">
+
+    <RadioGroup
+        android:id="@+id/postTypeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <RadioButton
+            android:id="@+id/lostRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lost" />
+
+        <RadioButton
+            android:id="@+id/foundRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Found" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        app:layout_constraintTop_toBottomOf="@+id/postTypeGroup"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Phone"
+        app:layout_constraintTop_toBottomOf="@+id/nameEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Description"
+        android:inputType="textMultiLine"
+        android:lines="5"
+    android:minLines="3"
+    android:maxLines="10"
+    android:gravity="top|start"
+    android:scrollbars="vertical"
+    app:layout_constraintTop_toBottomOf="@+id/phoneEditText"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Select Date"
+        android:focusable="false"
+    android:clickable="true"
+    android:inputType="none"
+    app:layout_constraintTop_toBottomOf="@+id/descriptionEditText"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toLeftOf="@+id/dateButton"
+    app:layout_constraintWidth_percent="0.75" />
+
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set Date"
+        app:layout_constraintTop_toTopOf="@+id/dateEditText"
+        app:layout_constraintBottom_toBottomOf="@+id/dateEditText"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Location"
+        app:layout_constraintTop_toBottomOf="@+id/dateEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintTop_toBottomOf="@+id/locationEditText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
