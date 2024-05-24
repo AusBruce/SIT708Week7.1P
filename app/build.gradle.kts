@@ -32,12 +32,23 @@ android {
 }
 
 dependencies {
-
+    implementation(libs.gson)
+    implementation(libs.volley)
+    implementation(libs.places)
+    implementation(libs.androidx.annotations)
+    implementation(libs.support.annotations)
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
+    implementation(libs.androidx.annotation.jvm)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+
+
+   
+
+
 }

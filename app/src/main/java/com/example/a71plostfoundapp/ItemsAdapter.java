@@ -1,10 +1,15 @@
 package com.example.a71plostfoundapp;
+
+
+
+
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -50,6 +55,7 @@ public class ItemsAdapter extends RecyclerView.Adapter<ItemsAdapter.ItemViewHold
         this.itemList = newItemList; // Update the list with new data
         notifyDataSetChanged(); // Notify the adapter that the data set has changed
     }
+
     public static class ItemViewHolder extends RecyclerView.ViewHolder {
         public TextView nameTextView;
 

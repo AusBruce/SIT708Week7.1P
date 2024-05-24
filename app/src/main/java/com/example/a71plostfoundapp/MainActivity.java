@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private Button createAdvertButton;
     private Button showItemsButton;
-
+    private Button buttonShowOnMap;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         createAdvertButton = findViewById(R.id.createAdvertButton);
         showItemsButton = findViewById(R.id.showItemsButton);
+        buttonShowOnMap = findViewById(R.id.showOnMaps);
 
         createAdvertButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -26,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        buttonShowOnMap.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, LocationActivity.class);
+            startActivity(intent);
+        });
         showItemsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
